@@ -1,4 +1,4 @@
-{% set version = "0.6.0" %}
+{% set version = "0.6.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,13 +10,12 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/rslurm_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/rslurm/rslurm_{{ version }}.tar.gz
-  sha256: 2f6dd738e99b7a3b3c3f33d6b77119acebfb0a0823f2d207505de97c91b2c23a
+  sha256: 8ef52e87a22297e2476ce129b065445814d7320cf9fe5bd792561fe8580c85a4
 
 build:
   merge_build_host: true  # [win]
   number: 0
   noarch: generic
-
   rpaths:
     - lib/R/lib/
     - lib/
@@ -24,11 +23,10 @@ build:
 requirements:
   build:
     - {{ posix }}zip               # [win]
-
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
     - r-whisker >=0.3
-
   run:
     - r-base
     - r-whisker >=0.3
@@ -40,7 +38,7 @@ test:
 
 about:
   home: https://github.com/SESYNC-ci/rslurm
-  license: GPL-3
+  license: GPL-3.0-only
   summary: Functions that simplify submitting R scripts to a 'Slurm' workload manager, in part by automating the division of embarrassingly parallel calculations across cluster nodes.
   license_family: GPL3
   license_file:
