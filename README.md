@@ -3,7 +3,7 @@ About r-rslurm
 
 Home: https://github.com/SESYNC-ci/rslurm
 
-Package license: GPL-3
+Package license: GPL-3.0-only
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-rslurm-feedstock/blob/master/LICENSE.txt)
 
