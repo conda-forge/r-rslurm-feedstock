@@ -23,11 +23,10 @@ build:
 requirements:
   build:
     - {{ posix }}zip               # [win]
-
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
     - r-whisker >=0.3
-
   run:
     - r-base
     - r-whisker >=0.3
@@ -39,7 +38,7 @@ test:
 
 about:
   home: https://github.com/SESYNC-ci/rslurm
-  license: GPL-3
+  license: GPL-3.0-only
   summary: Functions that simplify submitting R scripts to a 'Slurm' workload manager, in part by automating the division of embarrassingly parallel calculations across cluster nodes.
   license_family: GPL3
   license_file:
