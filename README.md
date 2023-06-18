@@ -1,11 +1,11 @@
-About r-rslurm
-==============
+About r-rslurm-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-rslurm-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/SESYNC-ci/rslurm
 
 Package license: GPL-3.0-only
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-rslurm-feedstock/blob/main/LICENSE.txt)
 
 Summary: Functions that simplify submitting R scripts to a 'Slurm' workload manager, in part by automating the division of embarrassingly parallel calculations across cluster nodes.
 
